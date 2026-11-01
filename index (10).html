@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>polybaby! — Свят Лебедев</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(160deg, #0b0e14 0%, #131a26 50%, #0b0e14 100%);
+    color: #e8ecf3; min-height: 100vh; line-height: 1.65;
+  }
+  header {
+    text-align: center; padding: 70px 20px 50px;
+    background: linear-gradient(180deg, rgba(88,116,255,.14), transparent);
+  }
+  .avatar {
+    width: 110px; height: 110px; border-radius: 50%;
+    margin: 0 auto 22px; display: flex; align-items: center; justify-content: center;
+    font-size: 46px; font-weight: 700; color: #fff;
+    background: linear-gradient(135deg, #5874ff, #9b5cff);
+    box-shadow: 0 8px 40px rgba(120,100,255,.45);
+  }
+  .nick {
+    font-size: 46px; font-weight: 800; letter-spacing: 1px;
+    background: linear-gradient(90deg, #6f8cff, #b06fff);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .tag { color: #9fb0d0; font-size: 17px; margin-top: 8px; }
+  .badges { margin-top: 18px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .badge {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+    border-radius: 20px; padding: 6px 16px; font-size: 14px; color: #cdd8ee;
+    backdrop-filter: blur(6px);
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 20px 20px 80px; }
+  .card {
+    background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.09);
+    border-radius: 18px; padding: 26px 30px; margin-bottom: 26px;
+    opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease;
+  }
+  .card.show { opacity: 1; transform: none; }
+  h2 {
+    font-size: 20px; color: #8ea6ff; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+  .fact {
+    background: rgba(255,255,255,.05); border-radius: 14px; padding: 16px 18px;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .fact b { display: block; font-size: 13px; color: #8a97b5; font-weight: 600; margin-bottom: 4px; }
+  .fact span { font-size: 16px; color: #f0f4fb; }
+  .row { display: flex; gap: 14px; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.06); flex-wrap: wrap; }
+  .row:last-child { border-bottom: none; }
+  .row .k { min-width: 190px; color: #8a97b5; font-size: 14.5px; }
+  .row .v { color: #eef2fa; font-size: 15.5px; }
+  .quote {
+    background: linear-gradient(135deg, rgba(88,116,255,.16), rgba(155,92,255,.12));
+    border: 1px solid rgba(130,120,255,.35); border-radius: 18px;
+    padding: 30px 34px; margin-bottom: 26px; font-size: 18px; font-style: italic; color: #e6eaff;
+  }
+  .quote .author { margin-top: 12px; font-style: normal; font-size: 14px; color: #9fb0d0; text-align: right; }
+  .about-big { font-size: 19px; color: #f0f4fb; }
+  footer { text-align: center; color: #6b7690; font-size: 13px; padding: 30px; }
+  @media (max-width: 560px) { .row .k { min-width: 130px; } .nick { font-size: 34px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="avatar">P!</div>
+  <div class="nick">polybaby!</div>
+  <div class="tag">Свят Лебедев — музыкант, артист</div>
+  <div class="badges">
+    <span class="badge">🎂 23 ноября</span>
+    <span class="badge">📍 Вичуга, Ивановская область</span>
+    <span class="badge">🎓 11 классов</span>
+    <span class="badge">🎧 Музыка</span>
+  </div>
+</header>
+
+<main>
+
+  <div class="card">
+    <h2>✨ О себе</h2>
+    <p class="about-big">«Я — то, что не приветствуется в обычном мире».</p>
+  </div>
+
+  <div class="card">
+    <h2>🧭 Жизненная позиция</h2>
+    <div class="row"><div class="k">Главное в жизни</div><div class="v">Совершенствование мира</div></div>
+    <div class="row"><div class="k">Главное в людях</div><div class="v">Доброта и честность</div></div>
+    <div class="row"><div class="k">Отношение к курению</div><div class="v">Компромиссное</div></div>
+    <div class="row"><div class="k">Отношение к алкоголю</div><div class="v">Нейтральное</div></div>
+    <div class="row"><div class="k">Вдохновляют</div><div class="v">Люди</div></div>
+  </div>
+
+  <div class="card">
+    <h2>💡 Интересы</h2>
+    <div class="row"><div class="k">Деятельность</div><div class="v">Музыкант, артист</div></div>
+    <div class="row"><div class="k">Интересы</div><div class="v">Добиться невозможного</div></div>
+    <div class="row"><div class="k">Любимая музыка</div><div class="v">Музыка, которая вдохновляет</div></div>
+    <div class="row"><div class="k">Любимые фильмы</div><div class="v">«Сталкер», «1+1», «Голяк», «Отбросы»</div></div>
+    <div class="row"><div class="k">Любимые книги</div><div class="v">Справочники, самоучители, нон-фикшн</div></div>
+  </div>
+
+  <div class="quote">
+    «Я какой день уже просыпаюсь с одной и той же мыслью: для чего нам друг друга ненавидеть и друг друга топить, если мы можем друг другу помогать и друг друга учить?»
+    <div class="author">— polybaby!</div>
+  </div>
+
+  <div class="card">
+    <h2>📋 Факты</h2>
+    <div class="facts">
+      <div class="fact"><b>Ник</b><span>polybaby!</span></div>
+      <div class="fact"><b>Имя</b><span>Свят Лебедев</span></div>
+      <div class="fact"><b>День рождения</b><span>23 ноября</span></div>
+      <div class="fact"><b>Город</b><span>Вичуга</span></div>
+      <div class="fact"><b>Образование</b><span>11 классов</span></div>
+      <div class="fact"><b>Род деятельности</b><span>Музыкант, артист</span></div>
+    </div>
+  </div>
+
+</main>
+<footer>polybaby! · Свят Лебедев · сайт-визитка</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.card, .quote').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
